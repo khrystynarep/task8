@@ -30,7 +30,7 @@ jobs:
 
     - name: Commit changes
       run: |
-        git config --global user.name 'CI'
+        git config --global user.name 'khrystynarep'
         git config --global user.email 'khrystynadukh@gmail.com'
         git add .
         git commit -m "CI: Automated build and test"
