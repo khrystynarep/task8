@@ -1,0 +1,24 @@
+name: Set Git Config
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  set-git-config:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Git
+      uses: actions/setup-git@v2
+      with:
+        # Set the username and email for Git commits
+        user-name: 'CI'
+        user-email: 'ci@example.com'
+
+    - name: Show Git Config
+      run: git config --list
